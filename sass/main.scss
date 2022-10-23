@@ -1,0 +1,23 @@
+@import './base/reset';
+@import './base/default';
+@import './base/normalize';
+
+@import './utils/variables';
+@import './utils/mixin';
+
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/features';
+@import './layouts/team';
+@import './layouts/clients';
+@import './layouts/modal';
+@import './layouts/footer';
+@import './layouts/projects';
+@import './layouts/examples';
+
+@import './components/btn';
+@import './components/container';
+@import './components/filters-btn';
+@import './components/footer-logo';
+@import './components/header-logo';
+@import './components/mail-subscr';

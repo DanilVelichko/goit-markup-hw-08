@@ -1,0 +1,53 @@
+/* -----------------------Секція основного банеру----------------------- */
+.hero {
+      &__section {
+        background-color: #2F303A;
+        text-align: center;
+        padding-top: 200px;
+        padding-bottom: 200px;
+        max-width: 1600px;
+        max-height: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/imgherooverlay.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: rgba(196, 196, 196, 1);
+    }
+
+    &__container {
+        @include container;
+    }
+
+    &__title {
+        display: inline-block;
+        width: 696px;
+        padding-bottom: 30px;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+
+}
+
+/* -----------------------Стилізаця Кнопки----------------------- */
+
+.button {
+    &__design {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        background-color: #2196F3;
+        padding: 10px 32px;
+        min-width: 152px;
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+    }
+
+}

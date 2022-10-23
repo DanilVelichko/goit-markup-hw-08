@@ -1,0 +1,321 @@
+/** --------------------------- Модальне вікно --------------------------- */
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #41383885;
+    animation-fill-mode: none;
+    opacity: 1;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &__container {
+        width: 528px;
+        min-height: 581px;
+        padding: 40px;
+        background-color: #fff;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+            0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #212121;
+    }
+
+    &__form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        color: #757575;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+
+}
+
+// ------------------Кнопка закриття модального вікна------------------
+
+.modal__close {
+    position: absolute;
+
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    right: 8px;
+    top: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover .close__logo {
+        fill: #2196F3;
+        cursor: pointer;
+    }
+}
+
+.close__logo {
+    width: 11px;
+    height: 11px;
+    border-color: #757575;
+    fill: #000000;
+}
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: 0;
+    visibility: hidden;
+    transform: scaleY(1);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// ------------------Форми заповнення------------------
+.form__field textarea {
+    padding-top: 12px;
+    padding-left: 18px;
+    border-radius: 4px;
+    resize: none;
+
+    &::placeholder {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
+
+}
+
+// ------------Форма з полями для внесення даних-----------------
+.form__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 448px;
+    text-align: left;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    & input {
+        width: 448px;
+        height: 40px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        padding-left: 42px;
+    }
+
+    &:hover input {
+        border: 1px solid var(--hover-color);
+        cursor: pointer;
+    }
+
+    &:focus input {
+        border: 1px solid var(--hover-color);
+
+    }
+
+    &:focus-within {
+        fill: var(--focus-color);
+    }
+
+    & textarea {
+        border: 1px solid rgba(33, 33, 33, 0.2);
+    }
+
+    &:hover textarea {
+        border: 1px solid var(--hover-color);
+        cursor: pointer;
+    }
+
+    &:hover {
+        fill: #188CE8;
+    }
+}
+
+// ------------------------Поля для внесення даних------------
+.form {
+    &__label {
+        margin-bottom: 4px;
+    }
+
+    &__input {
+        &:active {
+            fill: var(--focus-color);
+            border: 1px solid var(--focus-color);
+        }
+
+        &:focus {
+            outline: none !important;
+            border-color: var(--focus-color);
+        }
+
+    }
+
+    &__area {
+        height: 120px;
+
+        &:focus {
+            outline: none !important;
+            border-color: var(--focus-color);
+        }
+    }
+}
+
+
+
+// ------------Логотипи полей внесення даних-------------
+
+
+.link__legal {
+    color: #2196F3;
+    line-height: 1;
+    border-bottom: 1px solid #2196F3;
+}
+
+
+.name__logo {
+    width: 12px;
+    height: 12px;
+}
+
+.modal__logo {
+    position: absolute;
+    left: 15px;
+    top: 30px;
+}
+
+.telephone__logo {
+    width: 13px;
+    height: 13px;
+}
+
+.modal__telephone {
+    position: absolute;
+    left: 15px;
+    top: 110px;
+}
+
+.mail__logo {
+    width: 15px;
+    height: 12px;
+}
+
+.modal__mail {
+    position: absolute;
+    left: 15px;
+    top: 188px;
+}
+
+
+/* ------------------Чекбокс---------------------- */
+.form__checkbox {}
+
+.policy__checkbox {}
+
+.checkbox {
+    display: flex;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+    &__form {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    &__policy {
+        padding-left: 7px;
+        display: flex;
+        width: 400px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: #757575;
+        justify-content: space-between;
+        align-items: center;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__logo {
+        position: absolute;
+        width: 16px;
+        height: 15px;
+        fill: #212121;
+        left: -13px;
+        align-items: center;
+        border-radius: 2px;
+
+        .checkbox:checked+& {
+            fill: #2196F3;
+            background: #2196F3;
+        }
+    }
+}
+
+
+// ----------------Підтвердження -------------------
+
+
+.approve__logo {
+    position: absolute;
+    width: 11px;
+    height: 8px;
+    fill: #fff;
+    left: -10px;
+    align-items: center;
+
+    .checkbox:checked+& {
+        fill: #2196F3
+    }
+}
+
+
+
+.modal__button {
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    background: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    margin-left: 124px;
+    margin-top: 30px;
+}

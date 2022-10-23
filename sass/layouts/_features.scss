@@ -1,0 +1,45 @@
+/* -----------------------Секція Переваги----------------------- */
+.features {
+    &__container {
+        display: flex;
+        @include container;
+    }
+
+    &__section {
+        @include section;
+    }
+
+    &__item {
+        margin-right: 30px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__thumb {
+        display: flex;
+        width: 270px;
+        height: 120px;
+        align-items: center;
+        background-color: #F5F4FA;
+        border-radius: 4px;
+
+    }
+
+    & .title {
+        padding-top: 30px;
+        padding-bottom: 10px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+        color: var(--title-text-color);
+    }
+
+    & .text {
+        font-size: 14px;
+        line-height: 1.71;
+    }
+
+}

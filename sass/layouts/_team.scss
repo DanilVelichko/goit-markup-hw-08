@@ -1,0 +1,96 @@
+/* -----------------------Секція Команда----------------------- */
+.team {
+    &__container {
+        @include container;
+        margin-bottom: 30px;
+
+        & .title {
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.19;
+            text-align: center;
+            color: var(--title-text-color);
+        }
+
+        & .text {
+            font-size: 16px;
+            line-height: 1.19;
+            text-align: center;
+            color: var(--primary-text-color);
+        }
+    }
+
+    &__section {
+        background-color: #F5F4FA;
+        @include section;
+
+    }
+
+    &__item {
+        width: 270px;
+        padding-top: 30px;
+        padding-bottom: 16px;
+    }
+
+    &__list {
+        display: flex;
+        gap: 30px;
+
+        >.team__hero {
+            background-color: #FFFFFF;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+                0px 1px 1px rgba(0, 0, 0, 0.14),
+                0px 2px 1px rgba(0, 0, 0, 0.2);
+            border-radius: 0px 0px 4px 4px;
+        }
+
+    }
+
+}
+
+
+/* -------------------Стилізація Іконок--------------------------------- */
+.team__actions {
+    display: block;
+    padding: 0;
+    margin: 0;
+    list-style: 0;
+}
+
+.button {
+    display: flex;
+    padding: 0;
+    border: none;
+    gap: 10px;
+
+    margin-bottom: 30px;
+    justify-content: center;
+    background-size: 20px 20px;
+
+    &__icon {
+        display: inline-block;
+        padding: 12px;
+        width: 44px;
+        height: 44px;
+        fill: #AFB1B8;
+        background-color: #fff;
+        align-items: center;
+        text-align: center;
+        border-radius: 50%;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover {
+            fill: #FFFFFF;
+            background-color: #2196F3;
+            cursor: pointer;
+
+        }
+    }
+
+    &__logo {
+        width: 20px;
+        height: 20px;
+    }
+}

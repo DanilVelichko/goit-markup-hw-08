@@ -1,0 +1,39 @@
+/* -----------------------Секція Чим ми займаємось----------------------- */
+.examples {
+    &__container {
+        @include container;
+
+    }
+
+    &__section {
+        @include section;
+        padding-top: 0px;
+    }
+
+    &__list {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__thumb {
+        position: relative;
+    }
+
+    &__text {
+        position: absolute;
+        display: inline-block;
+        width: 370px;
+        height: 70px;
+        padding: 27px;
+        bottom: 0;
+        color: #FFFFFF;
+        font-style: Bold;
+        font-size: 14px;
+        line-height: 1.14;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        background: rgba(47, 48, 58, 0.8);
+    }
+
+}

@@ -1,0 +1,24 @@
+/* -----------------------Футер Логотип----------------------- */
+.footer {
+    &__logo {
+        display: inline-block;
+        color: rgba(0, 0, 0, 1);
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.19;
+    }
+
+    &__logo-white {
+        display: inline-block;
+        margin-bottom: 20px;
+        color: rgba(255, 255, 255, 1)
+    }
+
+    &__logo-blue {
+        display: inline-block;
+        align-items: center;
+        color: rgba(33, 150, 243, 1)
+    }
+}
