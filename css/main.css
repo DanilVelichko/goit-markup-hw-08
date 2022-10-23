@@ -33,6 +33,8 @@ address {
 img {
   display: block;
   margin: 0;
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -75,18 +77,6 @@ html {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.container.section {
-  padding-top: 0px;
 }
 
 /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -253,14 +243,31 @@ summary {
   /* ---------------------стилізація навігації по сайту--------------------- */
 }
 .header__container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
+  margin: 0 auto;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media screen and (min-width: 480px) {
+  .header__container {
+    width: 480px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__container {
+    width: 768px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__container {
+    width: 1200px;
+    height: auto;
+  }
 }
 .header__nav {
   display: flex;
@@ -362,8 +369,8 @@ summary {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-  max-width: 1600px;
-  max-height: 600px;
+  max-width: 100%;
+  max-height: auto;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/imgherooverlay.jpg);
@@ -371,17 +378,59 @@ summary {
   background-size: cover;
   background-position: center;
   background-color: rgb(196, 196, 196);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.hero__section__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+@media mobile {
+  .hero__section {
+    width: 480px;
+  }
+}
+@media tablet {
+  .hero__section {
+    width: 768px;
+  }
+}
+@media desktop {
+  .hero__section {
+    width: 1200px;
+  }
 }
 .hero__container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
+  margin: 0 auto;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
 }
+@media screen and (min-width: 480px) {
+  .hero__container {
+    width: 480px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__container {
+    width: 768px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__container {
+    width: 1200px;
+    height: auto;
+  }
+}
 .hero__title {
   display: inline-block;
-  width: 696px;
   padding-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
@@ -404,12 +453,28 @@ summary {
 
 /* -----------------------Секція Переваги----------------------- */
 .features__container {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
+  margin: 0 auto;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media screen and (min-width: 480px) {
+  .features__container {
+    width: 480px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .features__container {
+    width: 768px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__container {
+    width: 1200px;
+    height: auto;
+  }
 }
 .features__section {
   padding-top: 94px;
@@ -424,21 +489,42 @@ summary {
   line-height: 1.17;
   text-align: center;
 }
-.features__item {
-  margin-right: 30px;
+.features__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
-.features__item:last-child {
-  margin-right: 0;
+.features__item {
+  align-items: center;
+}
+@media screen and (min-width: 480px) {
+  .features__item {
+    width: 450px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .features__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__item {
+    width: 270px;
+  }
 }
 .features__thumb {
+  text-align: center;
   display: flex;
-  width: 270px;
+  width: 100%;
   height: 120px;
   align-items: center;
   background-color: #F5F4FA;
   border-radius: 4px;
+  justify-content: center;
 }
-.features .title {
+.features__title {
+  text-align: center;
   padding-top: 30px;
   padding-bottom: 10px;
   font-weight: 700;
@@ -447,33 +533,42 @@ summary {
   text-transform: uppercase;
   color: var(--title-text-color);
 }
-.features .text {
+.features__text {
+  width: 100%;
   font-size: 14px;
   line-height: 1.71;
+  padding-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .features__text {
+    padding-bottom: 0;
+  }
 }
 
 /* -----------------------Секція Команда----------------------- */
 .team__container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
+  margin: 0 auto;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  margin-bottom: 30px;
 }
-.team__container .title {
-  margin-bottom: 10px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  text-align: center;
-  color: var(--title-text-color);
+@media screen and (min-width: 480px) {
+  .team__container {
+    width: 480px;
+    height: auto;
+  }
 }
-.team__container .text {
-  font-size: 16px;
-  line-height: 1.19;
-  text-align: center;
-  color: var(--primary-text-color);
+@media screen and (min-width: 768px) {
+  .team__container {
+    width: 768px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__container {
+    width: 1200px;
+    height: auto;
+  }
 }
 .team__section {
   background-color: #F5F4FA;
@@ -489,19 +584,51 @@ summary {
   line-height: 1.17;
   text-align: center;
 }
+.team__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 0 auto;
+  width: 100%;
+}
 .team__item {
-  width: 270px;
+  width: 100%;
   padding-top: 30px;
   padding-bottom: 16px;
 }
-.team__list {
-  display: flex;
-  gap: 30px;
-}
-.team__list > .team__hero {
+.team__hero {
   background-color: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+@media screen and (min-width: 480px) {
+  .team__hero {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team__hero {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__hero {
+    width: 270px;
+  }
+}
+.team__title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: var(--title-text-color);
+}
+.team__text {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: var(--primary-text-color);
 }
 
 /* -------------------Стилізація Іконок--------------------------------- */
@@ -517,7 +644,7 @@ summary {
   padding: 0;
   border: none;
   gap: 10px;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   justify-content: center;
   background-size: 20px 20px;
 }
@@ -559,11 +686,29 @@ summary {
   text-align: center;
 }
 .clients__container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
+  margin: 0 auto;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .clients__container {
+    width: 480px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .clients__container {
+    width: 768px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__container {
+    width: 1200px;
+    height: auto;
+  }
 }
 .clients__block {
   display: block;
@@ -573,15 +718,16 @@ summary {
 }
 .clients__list {
   display: flex;
-  padding: 0;
-  border: none;
+  flex-wrap: wrap;
   gap: 30px;
-  justify-content: flex-end;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
 }
 .clients__thumb {
   display: flex;
   content: "";
-  width: 170px;
+  width: 210px;
   height: 92px;
   align-items: center;
   background: transparent;
@@ -591,6 +737,24 @@ summary {
   cursor: pointer;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .clients__thumb {
+    width: 210px;
+    height: 92px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .clients__thumb {
+    width: 226px;
+    height: 92px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__thumb {
+    width: 170px;
+    height: 92px;
+  }
 }
 .clients__thumb:hover .clients__icon {
   fill: #2196F3;
@@ -881,13 +1045,80 @@ summary {
   /* -----------------------Футер Навігація----------------------- */
 }
 .footer--container {
-  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media screen and (min-width: 480px) {
+  .footer--container {
+    width: 480px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer--container {
+    width: 768px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer--container {
+    width: 1200px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 480px) {
+  .footer--container {
+    align-items: center;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer--container {
+    align-items: center;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer--container {
+    display: flex;
+    align-items: baseline;
+    text-align: left;
+  }
+}
+.footer--address {
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+}
+@media screen and (min-width: 480px) {
+  .footer--address {
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer--address {
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer--address {
+    display: inline-block;
+    align-items: left;
+    text-align: left;
+  }
 }
 .footer__nav {
-  width: 231px;
+  width: 100%;
   display: inline-block;
   padding-bottom: 60px;
-  margin-right: 70px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -895,6 +1126,12 @@ summary {
   letter-spacing: 0.03em;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .footer__nav {
+    width: 231px;
+    margin-right: 70px;
+  }
 }
 .footer__nav .address {
   display: inline-block;
@@ -919,6 +1156,12 @@ summary {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #FFFFFF;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer__title {
+    text-align: left;
+  }
 }
 
 /* -----------------------Футер соціальні мережі----------------------- */
@@ -935,6 +1178,22 @@ summary {
   gap: 10px;
   justify-content: center;
   background-size: 20px 20px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 480px) {
+  .socials__list {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .socials__list {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .socials__list {
+    margin-bottom: 0px;
+  }
 }
 .socials__item {
   display: inline-block;
@@ -959,13 +1218,44 @@ summary {
   height: 20px;
 }
 
+.button {
+  display: flex;
+  padding: 0;
+  border: none;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+  background-size: 20px 20px;
+}
+.button__icon {
+  display: inline-block;
+  padding: 12px;
+  width: 44px;
+  height: 44px;
+  fill: #AFB1B8;
+  background-color: #fff;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button__icon:hover {
+  fill: #FFFFFF;
+  background-color: #2196F3;
+  cursor: pointer;
+}
+.button__logo {
+  width: 20px;
+  height: 20px;
+}
+
 /* ----------------------Контейнери прикладу робіт--------------------------------------- */
 .projects__section {
   padding-top: 94px;
   padding-bottom: 94px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
+  margin: 0 auto;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 0px;
@@ -978,6 +1268,24 @@ summary {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+}
+@media screen and (min-width: 480px) {
+  .projects__section {
+    width: 480px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .projects__section {
+    width: 768px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects__section {
+    width: 1200px;
+    height: auto;
+  }
 }
 .projects__list {
   display: flex;
@@ -1051,15 +1359,33 @@ summary {
 
 /* -----------------------Секція Чим ми займаємось----------------------- */
 .examples__container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
+  margin: 0 auto;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media screen and (min-width: 480px) {
+  .examples__container {
+    width: 480px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .examples__container {
+    width: 768px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .examples__container {
+    width: 1200px;
+    height: auto;
+  }
 }
 .examples__section {
   padding-top: 94px;
   padding-bottom: 94px;
+  display: none;
   padding-top: 0px;
 }
 .examples__section__title {
@@ -1070,6 +1396,11 @@ summary {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .examples__section {
+    display: inline;
+  }
 }
 .examples__list {
   display: flex;
@@ -1101,19 +1432,6 @@ button {
   border: 1px solid transparent;
   margin-right: auto;
   margin-left: auto;
-}
-
-/* -----------------------Стилізація основного контейнеру----------------------- */
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.container.section {
-  padding-top: 0px;
 }
 
 /* -----------------------Секція Фільтр робіт, Стилізаця Кнопки----------------------- */
@@ -1174,11 +1492,28 @@ button {
   text-align: center;
 }
 .filters__container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
+  margin: 0 auto;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media screen and (min-width: 480px) {
+  .filters__container {
+    width: 480px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .filters__container {
+    width: 768px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filters__container {
+    width: 1200px;
+    height: auto;
+  }
 }
 .filters__item {
   display: block;
@@ -1225,15 +1560,38 @@ button {
 }
 
 /** --------------------------- Емейл підписка  --------------------------- */
-.footer__mail {
-  margin-left: 93px;
+@media screen and (min-width: 1200px) {
+  .footer__mail {
+    margin-left: 93px;
+  }
 }
 .footer__field {
-  display: flex;
+  display: block;
   background-color: transparent;
 }
+@media screen and (min-width: 480px) {
+  .footer__field {
+    align-items: center;
+    text-align: center;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__field {
+    align-items: center;
+    text-align: center;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__field {
+    display: flex;
+    align-items: flex-start;
+  }
+}
 .footer__field input {
-  width: 358px;
+  display: inline-block;
+  width: 100%;
   height: 50px;
   font-weight: 400;
   font-size: 14px;
@@ -1246,9 +1604,27 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 480px) {
+  .footer__field input {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__field input {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__field input {
+    width: 358px;
+    height: 50px;
+    margin-bottom: 0px;
+  }
 }
 .footer__subscribtion {
-  display: flex;
+  display: inline-block;
   width: 200px;
   height: 50px;
   padding: 10px 10px 10px 28px;
@@ -1259,10 +1635,16 @@ button {
   background-color: #2196F3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  text-align: left;
+  text-align: center;
   align-items: center;
   letter-spacing: 0.06em;
   color: #FFFFFF;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer__subscribtion {
+    display: flex;
+  }
 }
 .footer__send {
   margin-left: 10px;

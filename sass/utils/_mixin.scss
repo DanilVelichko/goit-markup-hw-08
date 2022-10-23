@@ -1,9 +1,23 @@
 @mixin container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1200px;
+    margin: 0 auto;
+    width: 100%;
     padding-left: 15px;
     padding-right: 15px;
+
+    @media screen and (min-width: 480px) {
+        width: 480px;
+        height: auto;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 768px;
+        height: auto;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 1200px;
+        height: auto;
+    }
 }
 
 @mixin section {
@@ -18,5 +32,23 @@
         font-size: 36px;
         line-height: 1.17;
         text-align: center;
+    }
+}
+
+@mixin mobile {
+    @media screen and (min-width: 480px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1200px) {
+        @content;
     }
 }

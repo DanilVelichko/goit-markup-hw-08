@@ -1,33 +1,59 @@
 /* -----------------------Секція Переваги----------------------- */
 .features {
+
     &__container {
-        display: flex;
         @include container;
+
     }
 
     &__section {
         @include section;
+        //  display: block;
+
+    }
+
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
     }
 
     &__item {
-        margin-right: 30px;
 
-        &:last-child {
-            margin-right: 0;
+        align-items: center;
+
+        @include mobile {
+            width: 450px;
+            height: auto;
         }
+
+        @include tablet {
+            width: calc((100% - 30px) / 2);
+
+        }
+
+        @include desktop {
+            width: 270px;
+        }
+
     }
 
     &__thumb {
+        text-align: center;
         display: flex;
-        width: 270px;
+        width: 100%;
         height: 120px;
         align-items: center;
         background-color: #F5F4FA;
         border-radius: 4px;
+        justify-content: center;
+
 
     }
 
-    & .title {
+    &__title {
+        text-align: center;
         padding-top: 30px;
         padding-bottom: 10px;
         font-weight: 700;
@@ -37,9 +63,16 @@
         color: var(--title-text-color);
     }
 
-    & .text {
+    &__text {
+        width: 100%;
         font-size: 14px;
         line-height: 1.71;
+        padding-bottom: 30px;
+
+        @include tablet {
+            padding-bottom: 0;
+
+        }
     }
 
 }
