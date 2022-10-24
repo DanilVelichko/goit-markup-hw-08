@@ -1,29 +1,90 @@
 /* ------------------------------------Хедер ---------------------------- */
 .header {
-    height: 80px;
-    border-bottom: 1px solid #ECECEC;
+    display: flex;
+    height: 60px;
+
+    @include mobile {}
+
+    @include tablet {
+        height: 80px;
+        border-bottom: 1px solid #ECECEC;
+    }
+
+    @include desktop {
+        height: 80px;
+        border-bottom: 1px solid #ECECEC;
+    }
 
     &__container {
-        @include container;
-        display: flex;
         align-items: center;
-        justify-content: space-between;
+        position: relative;
+        @include container;
+
+
+        @include mobile {}
+
+        @include tablet {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        @include desktop {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
     }
 
     &__nav {
-        display: flex;
-        align-items: center;
+        position: relative;
+        // height: 134px;
+        margin-top: 16px;
+        // padding-left: 15px;
+
+        // align-items: baseline;
+
+        @include mobile {}
+
+        @include tablet {
+            margin-top: 0px;
+            margin-left: 0px;
+            display: flex;
+            align-items: center;
+        }
+
+        @include desktop {
+            margin-top: 0px;
+            margin-left: 0px;
+            display: flex;
+            align-items: center;
+        }
     }
 
     /* ---------------------стилізація навігації по сайту--------------------- */
     &__list {
-        display: flex;
-        align-items: center;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.14;
-        margin-left: 93px;
+        display: none;
+
+        @include mobile {}
+
+        @include tablet {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.14;
+            margin-left: 93px;
+        }
+
+        @include desktop {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.14;
+            margin-left: 93px;
+        }
 
         & .link {
             color: var(--link-color);
@@ -46,10 +107,23 @@
     }
 
     &__item {
-        padding-top: 32px;
-        padding-bottom: 32px;
-        margin-right: 32px;
-        letter-spacing: 0.02em;
+
+
+        @include mobile {}
+
+        @include tablet {
+            padding-top: 32px;
+            padding-bottom: 32px;
+            margin-right: 32px;
+            letter-spacing: 0.02em;
+        }
+
+        @include desktop {
+            padding-top: 32px;
+            padding-bottom: 32px;
+            margin-right: 32px;
+            letter-spacing: 0.02em;
+        }
     }
 
     &__item:last-child {
@@ -62,12 +136,27 @@
 }
 
 .contacts {
-    display: flex;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    margin-left: auto;
-    gap: 30px;
+    display: none;
+
+    @include mobile {}
+
+    @include tablet {
+        display: block;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        margin-left: auto;
+        // gap: 30px;
+    }
+
+    @include desktop {
+        display: flex;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        margin-left: auto;
+        gap: 30px;
+    }
 
     &__link {
         display: flex;
@@ -89,10 +178,23 @@
     }
 
     &__item {
-        display: flex;
-        padding-top: 32px;
-        padding-bottom: 32px;
-        align-items: center;
+   
+
+        @include mobile {}
+
+        @include tablet {
+            display: flex;
+            padding-top: 10px;
+            // padding-bottom: 32px;
+            align-items: center;
+        }
+
+        @include desktop {
+            display: flex;
+            padding-top: 32px;
+            padding-bottom: 32px;
+            align-items: center;
+        }
     }
 }
 
@@ -107,6 +209,7 @@
         background: #2196F3;
         border-radius: 2px;
     }
+
     &__portfolio {
         position: absolute;
         width: 78px;
@@ -120,4 +223,35 @@
 
 .link-svg {
     margin-right: 10px;
+}
+
+.menu-container {
+    position: absolute;
+
+    right: -120px;
+    top: 10px;
+
+    @include mobile {}
+
+    @include tablet {
+        display: none;
+
+    }
+
+    @include desktop {
+        display: none;
+
+    }
+}
+
+.menu-logo {
+    // display: block;
+    height: 40px;
+    width: 40px;
+
+}
+
+.icon-logo {
+    display: block;
+    fill: #212121;
 }

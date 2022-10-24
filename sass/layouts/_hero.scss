@@ -9,43 +9,74 @@
         max-height: auto;
         margin-left: auto;
         margin-right: auto;
-        background-image: linear-gradient(to right,
-                rgba(47, 48, 58, 0.4),
-                rgba(47, 48, 58, 0.4)),
-            url(../images/imgherooverlay.jpg);
+        background-image: var(--bg-hero-color),
+            url(../images/mob/hero-bg-mob.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         background-color: rgba(196, 196, 196, 1);
         @include section;
 
-        @media mobile {
+        @include mobile {
             width: 480px;
+
         }
 
-        @media tablet {
+        @include tablet {
             width: 768px;
+            background-image: var(--bg-hero-color),
+                url(../images/tablet/header-img-tablet.jpg);
         }
 
-        @media desktop {
-            width: 1200px;
+        @include desktop {
+            width: 1600px;
+            height: 600px;
+            background-image: var(--bg-hero-color),
+                url(../images/imgherooverlay.jpg);
         }
     }
 
     &__container {
         @include container;
 
+        @include desktop {
+
+            height: 600px;
+        }
     }
 
     &__title {
         display: inline-block;
-        // width: 696px;
+        height: auto;
         padding-bottom: 30px;
-        font-weight: 900;
-        font-size: 44px;
-        line-height: 1.36;
+        font-size: 26px;
+        line-height: 42px;
+        line-height: 1.62;
         text-transform: uppercase;
         color: #FFFFFF;
+        letter-spacing: 6%;
+
+        @include mobile {
+            width: 360px;
+
+
+        }
+
+        @include tablet {
+            width: 360px;
+
+            font-size: 26px;
+            line-height: 42px;
+            line-height: 1.62;
+        }
+
+        @include desktop {
+            width: 696px;
+            font-weight: 900;
+            font-size: 44px;
+            line-height: 1.36;
+
+        }
     }
 
 }
@@ -56,12 +87,21 @@
     &__design {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         background-color: #2196F3;
-        padding: 10px 32px;
+        padding: 10px 24px;
         min-width: 152px;
         color: #FFFFFF;
         font-weight: 700;
         font-size: 16px;
         line-height: 1.88;
+        letter-spacing: 6%;
+
+        @include mobile {}
+
+        @include tablet {}
+
+        @include desktop {
+            padding: 10px 32px;
+        }
     }
 
 }

@@ -226,6 +226,9 @@ summary {
   --focus-color: #2196F3;
   --link-color: #212121;
   --primary-bttn-color: #2196F3;
+  --bg-hero-color: linear-gradient(to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4));
 }
 
 .body {
@@ -238,18 +241,29 @@ summary {
 
 /* ------------------------------------Хедер ---------------------------- */
 .header {
-  height: 80px;
-  border-bottom: 1px solid #ECECEC;
+  display: flex;
+  height: 60px;
   /* ---------------------стилізація навігації по сайту--------------------- */
 }
+@media screen and (min-width: 768px) {
+  .header {
+    height: 80px;
+    border-bottom: 1px solid #ECECEC;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    height: 80px;
+    border-bottom: 1px solid #ECECEC;
+  }
+}
 .header__container {
+  align-items: center;
+  position: relative;
   margin: 0 auto;
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 @media screen and (min-width: 480px) {
   .header__container {
@@ -269,17 +283,62 @@ summary {
     height: auto;
   }
 }
+@media screen and (min-width: 768px) {
+  .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 .header__nav {
-  display: flex;
-  align-items: center;
+  position: relative;
+  margin-top: 16px;
+}
+@media screen and (min-width: 768px) {
+  .header__nav {
+    margin-top: 0px;
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__nav {
+    margin-top: 0px;
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+  }
 }
 .header__list {
-  display: flex;
-  align-items: center;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  margin-left: 93px;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header__list {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    margin-left: 93px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__list {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    margin-left: 93px;
+  }
 }
 .header__list .link {
   color: var(--link-color);
@@ -296,11 +355,21 @@ summary {
 .header__list .link.current {
   color: var(--accent-color);
 }
-.header__item {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  margin-right: 32px;
-  letter-spacing: 0.02em;
+@media screen and (min-width: 768px) {
+  .header__item {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-right: 32px;
+    letter-spacing: 0.02em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__item {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-right: 32px;
+    letter-spacing: 0.02em;
+  }
 }
 .header__item:last-child {
   margin-right: 0px;
@@ -310,12 +379,26 @@ summary {
 }
 
 .contacts {
-  display: flex;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  margin-left: auto;
-  gap: 30px;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .contacts {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    margin-left: auto;
+    gap: 30px;
+  }
 }
 .contacts__link {
   display: flex;
@@ -333,11 +416,20 @@ summary {
   color: var(--focus-color);
   fill: var(--hover-color);
 }
-.contacts__item {
-  display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  align-items: center;
+@media screen and (min-width: 768px) {
+  .contacts__item {
+    display: flex;
+    padding-top: 10px;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__item {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    align-items: center;
+  }
 }
 
 .line__studio {
@@ -363,6 +455,32 @@ summary {
   margin-right: 10px;
 }
 
+.menu-container {
+  position: absolute;
+  right: -120px;
+  top: 10px;
+}
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-container {
+    display: none;
+  }
+}
+
+.menu-logo {
+  height: 40px;
+  width: 40px;
+}
+
+.icon-logo {
+  display: block;
+  fill: #212121;
+}
+
 /* -----------------------Секція основного банеру----------------------- */
 .hero__section {
   background-color: #2F303A;
@@ -373,7 +491,7 @@ summary {
   max-height: auto;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/imgherooverlay.jpg);
+  background-image: var(--bg-hero-color), url(../images/mob/hero-bg-mob.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -390,19 +508,22 @@ summary {
   line-height: 1.17;
   text-align: center;
 }
-@media mobile {
+@media screen and (min-width: 480px) {
   .hero__section {
     width: 480px;
   }
 }
-@media tablet {
+@media screen and (min-width: 768px) {
   .hero__section {
     width: 768px;
+    background-image: var(--bg-hero-color), url(../images/tablet/header-img-tablet.jpg);
   }
 }
-@media desktop {
+@media screen and (min-width: 1200px) {
   .hero__section {
-    width: 1200px;
+    width: 1600px;
+    height: 600px;
+    background-image: var(--bg-hero-color), url(../images/imgherooverlay.jpg);
   }
 }
 .hero__container {
@@ -429,26 +550,60 @@ summary {
     height: auto;
   }
 }
+@media screen and (min-width: 1200px) {
+  .hero__container {
+    height: 600px;
+  }
+}
 .hero__title {
   display: inline-block;
+  height: auto;
   padding-bottom: 30px;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 42px;
+  line-height: 1.62;
   text-transform: uppercase;
   color: #FFFFFF;
+  letter-spacing: 6%;
+}
+@media screen and (min-width: 480px) {
+  .hero__title {
+    width: 360px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    width: 360px;
+    font-size: 26px;
+    line-height: 42px;
+    line-height: 1.62;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    width: 696px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 /* -----------------------Стилізаця Кнопки----------------------- */
 .button__design {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: #2196F3;
-  padding: 10px 32px;
+  padding: 10px 24px;
   min-width: 152px;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
+  letter-spacing: 6%;
+}
+@media screen and (min-width: 1200px) {
+  .button__design {
+    padding: 10px 32px;
+  }
 }
 
 /* -----------------------Секція Переваги----------------------- */
@@ -785,8 +940,8 @@ summary {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal__container {
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  min-height: 609px;
   padding: 40px;
   background-color: #fff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -796,6 +951,12 @@ summary {
   left: 50%;
   transform: translate(-50%, -50%);
   display: block;
+}
+@media screen and (min-width: 1200px) {
+  .modal__container {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 .modal__title {
   margin-bottom: 30px;
@@ -872,17 +1033,32 @@ summary {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-  width: 448px;
+  width: 370px;
   text-align: left;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 1200px) {
+  .form__field {
+    width: 448px;
+  }
+}
 .form__field input {
-  width: 448px;
+  width: 370px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 42px;
+}
+@media screen and (min-width: 768px) {
+  .form__field input {
+    width: 448px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .form__field input {
+    width: 448px;
+  }
 }
 .form__field:hover input {
   border: 1px solid var(--hover-color);
@@ -986,23 +1162,39 @@ summary {
   display: flex;
   width: 400px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .checkbox__policy {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .checkbox__policy {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .checkbox__logo {
   position: absolute;
   width: 16px;
   height: 15px;
   fill: #212121;
-  left: -13px;
+  left: 15px;
   align-items: center;
   border-radius: 2px;
+}
+@media screen and (min-width: 1200px) {
+  .checkbox__logo {
+    left: -13px;
+  }
 }
 .checkbox:checked + .checkbox__logo {
   fill: #2196F3;
@@ -1014,8 +1206,13 @@ summary {
   width: 11px;
   height: 8px;
   fill: #fff;
-  left: -10px;
+  left: 17px;
   align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .approve__logo {
+    left: -10px;
+  }
 }
 .checkbox:checked + .approve__logo {
   fill: #2196F3;
@@ -1034,7 +1231,7 @@ summary {
   background: #188CE8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  margin-left: 124px;
+  margin-left: auto;
   margin-top: 30px;
 }
 
@@ -1550,8 +1747,23 @@ button {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.38;
+  letter-spacing: 3%;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    font-size: 24px;
+    line-height: 1.38;
+    letter-spacing: 3%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 3%;
+  }
 }
 .logo--blue {
   display: inline-block;

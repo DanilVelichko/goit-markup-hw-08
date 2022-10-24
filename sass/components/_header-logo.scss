@@ -5,8 +5,23 @@
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.38;
+    letter-spacing: 3%;
+
+    @include mobile {}
+
+    @include tablet {
+        font-size: 24px;
+        line-height: 1.38;
+        letter-spacing: 3%;
+    }
+
+    @include desktop {
+        font-size: 26px;
+        line-height: 1.19;
+        letter-spacing: 3%;
+    }
 
     &--blue {
         display: inline-block;
@@ -14,5 +29,3 @@
         color: rgba(33, 150, 243, 1)
     }
 }
-
-
