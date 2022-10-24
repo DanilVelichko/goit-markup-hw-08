@@ -5,8 +5,26 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    margin-bottom: 0px;
+    margin-bottom: 15px;
     padding-bottom: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    @include mobile {
+        margin-bottom: 15px;
+        padding-bottom: 25px;
+    }
+
+    @include tablet {
+        padding-bottom: 30px;
+        margin-bottom: 0px;
+        justify-content: center;
+    }
+
+    @include desktop {
+        margin-bottom: 0px;
+    }
 
     &__button {
         display: inline-block;
@@ -58,3 +76,4 @@
         }
     }
 }
+

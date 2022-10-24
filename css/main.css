@@ -437,7 +437,7 @@ summary {
   width: 48px;
   height: 4px;
   left: -2px;
-  top: 44px;
+  top: 45px;
   background: #2196F3;
   border-radius: 2px;
 }
@@ -445,10 +445,20 @@ summary {
   position: absolute;
   width: 78px;
   height: 4px;
-  top: 44px;
-  left: -3px;
+  top: 76px;
+  left: 300px;
   background: #2196F3;
   border-radius: 2px;
+}
+@media screen and (min-width: 768px) {
+  .line__portfolio {
+    left: 298px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .line__portfolio {
+    left: 308px;
+  }
 }
 
 .link-svg {
@@ -521,6 +531,7 @@ summary {
 }
 @media screen and (min-width: 1200px) {
   .hero__section {
+    padding-top: 200px;
     width: 1600px;
     height: 600px;
     background-image: var(--bg-hero-color), url(../images/imgherooverlay.jpg);
@@ -1275,8 +1286,11 @@ summary {
 }
 @media screen and (min-width: 768px) {
   .footer--container {
-    align-items: center;
+    align-items: baseline;
     text-align: center;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1487,6 +1501,8 @@ summary {
 .projects__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 .projects__list .title {
   color: var(--title-text-color);
@@ -1498,15 +1514,30 @@ summary {
   color: var(--primary-text-color);
 }
 .projects__item {
-  width: 370px;
-  margin-right: 30px;
-  margin-bottom: 30px;
+  width: 100%;
 }
-.projects__item:nth-child(3n) {
-  margin-right: 0;
+@media screen and (min-width: 480px) {
+  .projects__item {
+    width: 450px;
+  }
 }
-.projects__item:nth-last-child(-n+3) {
-  margin-bottom: 0;
+@media screen and (min-width: 768px) {
+  .projects__item {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects__item {
+    width: 370px;
+    justify-content: none;
+    gap: 0;
+  }
+  .projects__item:nth-child(3n) {
+    margin-right: 0;
+  }
+  .projects__item:nth-last-child(-n+3) {
+    margin-bottom: 0;
+  }
 }
 .projects__item > .title {
   display: block;
@@ -1518,9 +1549,27 @@ summary {
 }
 .projects__thumb {
   position: relative;
-  width: 370px;
-  height: 294px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
+}
+@media screen and (min-width: 480px) {
+  .projects__thumb {
+    width: 450px;
+    height: 404px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .projects__thumb {
+    width: 354px;
+    height: 440px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects__thumb {
+    width: 370px;
+    height: 294px;
+  }
 }
 .projects__link:hover {
   display: block;
@@ -1627,7 +1676,6 @@ button {
   cursor: pointer;
   border-radius: 4px;
   border: 1px solid transparent;
-  margin-right: auto;
   margin-left: auto;
 }
 
@@ -1639,8 +1687,11 @@ button {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-bottom: 0px;
+  margin-bottom: 15px;
   padding-bottom: 50px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 .filters__title {
   margin-top: 0;
@@ -1650,6 +1701,24 @@ button {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+}
+@media screen and (min-width: 480px) {
+  .filters {
+    margin-bottom: 15px;
+    padding-bottom: 25px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .filters {
+    padding-bottom: 30px;
+    margin-bottom: 0px;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filters {
+    margin-bottom: 0px;
+  }
 }
 .filters__button {
   display: inline-block;
@@ -1790,15 +1859,18 @@ button {
 }
 @media screen and (min-width: 768px) {
   .footer__field {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding-bottom: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer__field {
     display: flex;
     align-items: flex-start;
+    flex-direction: row;
   }
 }
 .footer__field input {
@@ -1826,6 +1898,8 @@ button {
 @media screen and (min-width: 768px) {
   .footer__field input {
     margin-bottom: 20px;
+    width: 450px;
+    height: 50px;
   }
 }
 @media screen and (min-width: 1200px) {

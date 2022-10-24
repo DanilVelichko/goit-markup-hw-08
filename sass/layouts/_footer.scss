@@ -14,8 +14,11 @@
         }
 
         @include tablet {
-            align-items: center;
+            align-items: baseline;
             text-align: center;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-around;
         }
 
         @include desktop {
@@ -56,7 +59,7 @@
         width: 100%;
         display: inline-block;
         padding-bottom: 60px;
-                font-style: normal;
+        font-style: normal;
         font-weight: 400;
         font-size: 14px;
         line-height: 1.71;
@@ -122,6 +125,7 @@
 
     &__list {
         display: flex;
+
         padding: 0;
         border: none;
         gap: 10px;
