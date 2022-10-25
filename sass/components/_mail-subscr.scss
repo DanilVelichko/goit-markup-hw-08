@@ -12,9 +12,9 @@
     }
 
     &__field {
-        display: block;
+        display: flex;
         background-color: transparent;
-
+flex-direction: column;
         @include mobile {
             align-items: center;
             text-align: center;
@@ -27,6 +27,7 @@
             justify-content: space-around;
             flex-direction: column;
             align-items: center;
+            margin: auto 0;
         }
 
         @include desktop {
@@ -72,7 +73,7 @@
     }
 
     &__subscribtion {
-        display: inline-block;
+        display: flex;
         width: 200px;
         height: 50px;
         padding: 10px 10px 10px 28px;

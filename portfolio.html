@@ -27,7 +27,7 @@
           <li class="header__item">
             <div class="header__thumb">
               <a class="link " href="index.html">Студія</a>
-             
+
 
           </li>
           <li class="header__item"><a class="link current" href="portfolio.html">Портфоліо</a></li>
@@ -51,13 +51,62 @@
             </svg>+38 096 111 11 11</a>
         </li>
       </ul>
-      <div class="menu-container">
+      <!--------------------------- Мобільне вікно ------------------------>
+
+      <button type="button" class="menu-container" data-menu-open>
         <a class="menu-logo"> <svg class="icon-logo" height="40" weight="40">
             <use href="./images/icons.svg#icon-menu-logo"></use>
           </svg> </a>
-      </div>
+      </button>
     </div>
 
+    <div class="mob-menu is-hidden " data-menu>
+      <div class="mob_container">
+        <button type="button" class="menu__close" data-menu-close>
+          <svg class="menu__logo">
+            <use href="images/icons.svg#icon-vector-close"></use>
+          </svg>
+        </button>
+
+        <ul class="mob__list">
+          <li class="mob__item"><a class="link current" href="index.html">Студія</a> </li>
+          <li class="mob__item"><a class="link" href="portfolio.html">Портфоліо</a></li>
+          <li class="mob__item"><a class="link" href="">Контакти</a></li>
+        </ul>
+
+        <ul class="mob__contacts">
+          <li class="contacts-item">
+            <a class="mob__tel" href="tel:+380961111111"> +38 096 111 11 11</a>
+          <li class="contacts-item">
+            <a class="mob__mail" href="mailto:info@devstudio.com"> info@devstudio.com</a>
+          </li>
+
+          </li>
+        </ul>
+
+
+
+        <div class="mob_socials">
+          <ul class="mob_socials-list">
+            <li class="mob_socials-item ">
+              <a class="social-link" href="#">Instagram </a>
+            </li>
+
+            <li class="mob_socials-item ">
+              <a class="social-link" href="#">Twitter </a>
+            </li>
+
+            <li class="mob_socials-item ">
+              <a class="social-link" href="#">Facebook </a>
+            </li>
+
+            <li class="mob_socials-item">
+              <a class="social-link" href="#">LinkedIn </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </header>
 
   <!----------------------- Main  ----------------------->
@@ -82,7 +131,20 @@
           <li class="projects__item">
             <a href="#" class="projects__link">
               <div class="projects__thumb">
-                <img src="images/imgtechnokrak.jpg" alt="Ноутбук з фотографіями на екрані">
+                <picture>
+                  <source srcset="
+              ./images/imgtechnokrak.jpg 1x,
+              ./images/imgtechnokrak-2x.jpg 2x" media="(min-width:1200px)" />
+                  <source srcset="
+              ./images/tablet/imgnote-tablet.jpg 1x,
+              ./images/tablet/imgnote-tablet-2x.jpg 2x" media="(min-width:768px)" />
+                  <source srcset="
+              ./images/mob/techkrak-mob.jpg 1x,
+              ./images/mob/techkrak-mob-2x.jpg 2x" media="(min-width:480px)" />
+                  <img src="images/imgtechnokrak.jpg" alt="Ноутбук з фотографіями на екрані" />
+
+                </picture>
+
                 <div class="projects__text">
                   <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
                     відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -99,7 +161,20 @@
           <li class="projects__item">
             <a class="projects__link" href="#">
               <div class="projects__thumb">
-                <img src="images/imgposter.jpg" alt="баскетболісти грають за м'яч">
+                <picture>
+                  <source srcset="
+              ./images/imgposter.jpg 1x,
+              ./images/imgposter-2x.jpg 2x" media="(min-width:1200px)" />
+                  <source srcset="
+              ./images/tablet/imgbasket-tablet.jpg 1x,
+              ./images/tablet/imgbasket-tablet-2x.jpg 2x" media="(min-width:768px)" />
+                  <source srcset="
+              ./images/mob/imgbasket-mob.jpg 1x,
+              ./images/mob/imgbasket-mob-2x.jpg 2x" media="(min-width:480px)" />
+                  <img src="images/imgposter.jpg" alt="Баскетболісти грають з м'ячем" />
+
+                </picture>
+
                 <div class="projects__text">
                   <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
                     відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -116,7 +191,19 @@
           <li class="projects__item">
             <a class="projects__link" href="#">
               <div class="projects__thumb">
-                <img src="images/imgseafood.jpg" alt="">
+                <picture>
+                  <source srcset="
+              ./images/imgseafood.jpg 1x,
+              ./images/imgseafood-2x.jpg 2x" media="(min-width:1200px)" />
+                  <source srcset="
+              ./images/tablet/imgseafood-tablet.jpg 1x,
+              ./images/tablet/imgseafood-tablet-2x.jpg 2x" media="(min-width:768px)" />
+                  <source srcset="
+              ./images/mob/imgseafood-mob.jpg 1x,
+              ./images/mob/imgseafood-mob-2x.jpg 2x" media="(min-width:480px)" />
+                  <img src="images/imgseafood.jpg"  alt="Постер з рибою на картинці">
+
+                </picture>
                 <div class="projects__text">
                   <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
                     відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -133,7 +220,20 @@
           <li class="projects__item">
             <a class="projects__link" href="#">
               <div class="projects__thumb">
-                <img src="images/imgphones.jpg" alt="">
+                <picture>
+                  <source srcset="
+              ./images/imgphones.jpg 1x,
+              ./images/imgphones-2x.jpg 2x" media="(min-width:1200px)" />
+                  <source srcset="
+              ./images/tablet/imgphones-tablet.jpg 1x,
+              ./images/tablet/imgphones-tablet-2x.jpg 2x" media="(min-width:768px)" />
+                  <source srcset="
+              ./images/mob/imgphones-mob.jpg 1x,
+              ./images/mob/imgphones-mob-2x.jpg 2x" media="(min-width:480px)" />
+                  <img src="images/imgphones.jpg" alt="Навушники">
+
+                </picture>
+
                 <div class="projects__text">
                   <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
                     відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -150,7 +250,20 @@
           <li class="projects__item">
             <a class="projects__link" href="#">
               <div class="projects__thumb">
-                <img src="images/imgboxs.jpg" alt="">
+                <picture>
+                  <source srcset="
+              ./images/imgboxs.jpg 1x,
+              ./images/imgboxs-2x.jpg 2x" media="(min-width:1200px)" />
+                  <source srcset="
+              ./images/tablet/imgboxes-tablets.jpg 1x,
+              ./images/tablet/imgboxes-tablets-2x.jpg 2x" media="(min-width:768px)" />
+                  <source srcset="
+              ./images/mob/imgboses-mob.jpg 1x,
+              ./images/mob/imgboses-mob-2x.jpg 2x" media="(min-width:480px)" />
+                  <img src="images/imgboxs.jpg" alt="Два ящика">
+
+                </picture>
+
                 <div class="projects__text">
                   <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
                     відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -167,7 +280,20 @@
           <li class="projects__item">
             <a class="projects__link" href="#">
               <div class="projects__thumb">
-                <img src="images/imgmonitor.jpg" alt="">
+                <picture>
+                  <source srcset="
+              ./images/imgmonitor.jpg 1x,
+              ./images/imgmonitor-2x.jpg 2x" media="(min-width:1200px)" />
+                  <source srcset="
+              ./images/tablet/imgmonitor-tablets.jpg 1x,
+              ./images/tablet/imgmonitor-tablets-2x.jpg 2x" media="(min-width:768px)" />
+                  <source srcset="
+              ./images/mob/img-monitor-mob.jpg 1x,
+              ./images/mob/img-monitor-mob-2x.jpg 2x" media="(min-width:480px)" />
+                  <img src="images/imgmonitor.jpg" alt="Включений монітор з графічними віджетами на екрані">
+
+                </picture>
+
                 <div class="projects__text">
                   <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
                     відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -184,7 +310,19 @@
           <li class="projects__item">
             <a class="projects__link" href="#">
               <div class="projects__thumb">
-                <img src="images/imgbook.jpg" alt="">
+                <picture>
+                  <source srcset="
+              ./images/imgbook.jpg 1x,
+              ./images/imgbook-2x.jpg 2x" media="(min-width:1200px)" />
+                  <source srcset="
+              ./images/tablet/imgbook-tablet.jpg 1x,
+              ./images/tablet/imgbook-tablet-2x.jpg 2x" media="(min-width:768px)" />
+                  <source srcset="
+              ./images/mob/imglimited-mob.jpg 1x,
+              ./images/mob/imglimited-mob-2x.jpg 2x" media="(min-width:480px)" />
+                  <img src="images/imgbook.jpg" alt="Книжка">
+                </picture>
+
                 <div class="projects__text">
                   <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
                     відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -201,7 +339,19 @@
           <li class="projects__item">
             <a class="projects__link" href="#">
               <div class="projects__thumb">
-                <img src="images/imglab.jpg" alt="">
+                <picture>
+                  <source srcset="
+              ./images/imglab.jpg 1x,
+              ./images/imglab-2x.jpg 2x" media="(min-width:1200px)" />
+                  <source srcset="
+              ./images/tablet/imglab-tablet.jpg 1x,
+              ./images/tablet/imglab-tablet-2x.jpg 2x" media="(min-width:768px)" />
+                  <source srcset="
+              ./images/mob/imglab-mob.jpg 1x,
+              ./images/mob/imglab-mob-2x.jpg 2x" media="(min-width:480px)" />
+                  <img src="images/imglab.jpg" alt="Лейбл на ниточці">
+                </picture>
+
                 <div class="projects__text">
                   <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
                     відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -218,7 +368,19 @@
           <li class="projects__item">
             <a class="projects__link" href="#">
               <div class="projects__thumb">
-                <img src="images/imgbusiness.jpg" alt="">
+                <picture>
+                  <source srcset="
+              ./images/imgbusiness.jpg 1x,
+              ./images/imgbusiness-2x.jpg 2x" media="(min-width:1200px)" />
+                  <source srcset="
+              ./images/tablet/imgnotehand-tablet.jpg 1x,
+              ./images/tablet/imgnotehand-tablet-2x.jpg 2x" media="(min-width:768px)" />
+                  <source srcset="
+              ./images/mob/imgnotebook-mob.jpg 1x,
+              ./images/mob/imgnotebook-mob-2x.jpg 2x" media="(min-width:480px)" />
+                  <img src="images/imgbusiness.jpg" alt="Руки на працючому ноутбуці">
+                </picture>
+
                 <div class="projects__text">
                   <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
                     відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
