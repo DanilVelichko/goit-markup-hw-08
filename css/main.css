@@ -243,18 +243,17 @@ summary {
 .header {
   display: flex;
   height: 60px;
+  border-bottom: 1px solid #ECECEC;
   /* ---------------------стилізація навігації по сайту--------------------- */
 }
 @media screen and (min-width: 768px) {
   .header {
     height: 80px;
-    border-bottom: 1px solid #ECECEC;
   }
 }
 @media screen and (min-width: 1200px) {
   .header {
     height: 80px;
-    border-bottom: 1px solid #ECECEC;
   }
 }
 .header__container {
@@ -497,7 +496,7 @@ summary {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-  max-width: 100%;
+  max-width: 1600px;
   max-height: auto;
   margin-left: auto;
   margin-right: auto;
@@ -506,8 +505,8 @@ summary {
   background-size: cover;
   background-position: center;
   background-color: rgb(196, 196, 196);
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .hero__section__title {
   margin-top: 0;
@@ -517,6 +516,24 @@ summary {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+}
+@media screen and (min-width: 480px) {
+  .hero__section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 @media screen and (min-width: 480px) {
   .hero__section {
@@ -643,8 +660,8 @@ summary {
   }
 }
 .features__section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .features__section__title {
   margin-top: 0;
@@ -654,6 +671,24 @@ summary {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+}
+@media screen and (min-width: 480px) {
+  .features__section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .features__section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .features__wrap {
   display: flex;
@@ -703,7 +738,6 @@ summary {
   width: 100%;
   font-size: 14px;
   line-height: 1.71;
-  padding-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .features__text {
@@ -738,8 +772,8 @@ summary {
 }
 .team__section {
   background-color: #F5F4FA;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .team__section__title {
   margin-top: 0;
@@ -749,6 +783,24 @@ summary {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+}
+@media screen and (min-width: 480px) {
+  .team__section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team__section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .team__list {
   display: flex;
@@ -839,8 +891,8 @@ summary {
 
 /*------------------------------ Секція Постійні клієнти ----------------------------> */
 .clients__section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .clients__section__title {
   margin-top: 0;
@@ -850,6 +902,24 @@ summary {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+}
+@media screen and (min-width: 480px) {
+  .clients__section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .clients__section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .clients__container {
   margin: 0 auto;
@@ -889,6 +959,9 @@ summary {
   margin: 0 auto;
   width: 100%;
   justify-content: center;
+}
+.clients__item {
+  gap: 30px;
 }
 .clients__thumb {
   display: flex;
@@ -1060,11 +1133,6 @@ summary {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 42px;
-}
-@media screen and (min-width: 768px) {
-  .form__field input {
-    width: 448px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .form__field input {
@@ -1242,7 +1310,6 @@ summary {
   background: #188CE8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  margin-left: auto;
   margin-top: 30px;
 }
 
@@ -1463,8 +1530,8 @@ summary {
 
 /* ----------------------Контейнери прикладу робіт--------------------------------------- */
 .projects__section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   margin: 0 auto;
   width: 100%;
   padding-left: 15px;
@@ -1480,6 +1547,24 @@ summary {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+}
+@media screen and (min-width: 480px) {
+  .projects__section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .projects__section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects__section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 @media screen and (min-width: 480px) {
   .projects__section {
@@ -1632,8 +1717,8 @@ summary {
   }
 }
 .examples__section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   display: none;
   padding-top: 0px;
 }
@@ -1645,6 +1730,24 @@ summary {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+}
+@media screen and (min-width: 480px) {
+  .examples__section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .examples__section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .examples__section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .examples__section {
@@ -1679,13 +1782,12 @@ button {
   cursor: pointer;
   border-radius: 4px;
   border: 1px solid transparent;
-  margin-left: auto;
 }
 
 /* -----------------------Секція Фільтр робіт, Стилізаця Кнопки----------------------- */
 .filters {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1704,6 +1806,24 @@ button {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+}
+@media screen and (min-width: 480px) {
+  .filters {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .filters {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filters {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 @media screen and (min-width: 480px) {
   .filters {
@@ -1748,8 +1868,8 @@ button {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .filters__section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .filters__section__title {
   margin-top: 0;
@@ -1759,6 +1879,24 @@ button {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+}
+@media screen and (min-width: 480px) {
+  .filters__section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .filters__section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filters__section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .filters__container {
   margin: 0 auto;
@@ -1853,6 +1991,8 @@ button {
   display: flex;
   background-color: transparent;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 @media screen and (min-width: 480px) {
   .footer__field {

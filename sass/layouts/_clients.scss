@@ -27,7 +27,9 @@
         justify-content: center;
     }
 
-    &__item {}
+    &__item {
+        gap: 30px;
+    }
 
     &__thumb {
         display: flex;

@@ -2,17 +2,18 @@
 .header {
     display: flex;
     height: 60px;
+    border-bottom: 1px solid #ECECEC;
 
     @include mobile {}
 
     @include tablet {
         height: 80px;
-        border-bottom: 1px solid #ECECEC;
+
     }
 
     @include desktop {
         height: 80px;
-        border-bottom: 1px solid #ECECEC;
+
     }
 
     &__container {

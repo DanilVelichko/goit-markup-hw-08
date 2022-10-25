@@ -27,9 +27,7 @@
 
         @include mobile {}
 
-        @include tablet {
-          
-        }
+        @include tablet {}
 
         @include desktop {
             width: 528px;
@@ -131,9 +129,7 @@
 
     @include mobile {}
 
-    @include tablet {
-        
-    }
+    @include tablet {}
 
     @include desktop {
         width: 448px;
@@ -148,9 +144,7 @@
 
         @include mobile {}
 
-        @include tablet {
-            width: 448px;
-        }
+        @include tablet {}
 
         @include desktop {
             width: 448px;
@@ -372,6 +366,6 @@
     background: #188CE8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    margin-left: auto;
+
     margin-top: 30px;
 }
