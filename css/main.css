@@ -74,7 +74,7 @@ html {
   margin-bottom: 50px;
   color: var(--title-text-color);
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
 }
@@ -2089,7 +2089,7 @@ button {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: white;
+  background-color: #FFFFFF;
   top: 0;
   z-index: 1;
   padding-top: 48px;
@@ -2106,14 +2106,31 @@ button {
   }
 }
 
+.menu-container {
+  position: absolute;
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  top: 5px;
+}
+.menu__logo {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-color: white;
+  fill: #000000;
+  right: 0;
+  top: 10px;
+}
 .menu__close {
   position: absolute;
   width: 30px;
   height: 30px;
   background-color: transparent;
   border-radius: 50%;
-  right: 8px;
-  top: 8px;
+  right: 15px;
+  top: 15px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -2123,22 +2140,17 @@ button {
   cursor: pointer;
 }
 
-.menu__logo {
-  width: 11px;
-  height: 11px;
-  border-color: white;
-  fill: #000000;
-}
-
-.menu-container {
-  background: transparent;
+.icon-logo {
+  position: absolute;
+  height: 40px;
+  right: 0;
+  top: 5px;
 }
 
 .mob__list {
   color: #212121;
   font-size: 40px;
   line-height: 1.17;
-  margin-bottom: 302px;
 }
 .mob__list .link {
   color: #212121;
@@ -2155,6 +2167,8 @@ button {
 }
 
 .mob__contacts {
+  bottom: 35px;
+  position: absolute;
   margin-bottom: 64px;
 }
 
@@ -2172,6 +2186,11 @@ button {
   color: #757575;
   font-size: 24px;
   line-height: 1.17;
+}
+
+.mob_socials {
+  position: absolute;
+  bottom: 48px;
 }
 
 .mob_socials-list {

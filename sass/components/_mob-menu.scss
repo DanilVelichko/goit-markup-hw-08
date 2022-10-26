@@ -2,13 +2,11 @@
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: white;
+    background-color: #FFFFFF;
     top: 0;
     z-index: 1;
     padding-top: 48px;
     padding-left: 40px;
-
-    @include mobile {}
 
     @include tablet {
         display: none;
@@ -21,42 +19,63 @@
 }
 
 // ------------------Кнопка закриття модального вікна------------------
+.menu {
+    &-container {
+        position: absolute;
+        background: transparent;
+        width: 40px;
+        height: 40px;
+        right: 0;
+        top: 5px;
 
-.menu__close {
-    position: absolute;
+    }
 
-    width: 30px;
-    height: 30px;
-    background-color: transparent;
-    border-radius: 50%;
-    right: 8px;
-    top: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &__logo {
+        position: absolute;
+        width: 11px;
+        height: 11px;
+        border-color: white;
+        fill: #000000;
+        right: 0;
+        top: 10px;
+    }
 
-    &:hover .menu__logo {
-        fill: #2196F3;
-        cursor: pointer;
+    &__close {
+        position: absolute;
+
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border-radius: 50%;
+        right: 15px;
+        top: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover .menu__logo {
+            fill: #2196F3;
+            cursor: pointer;
+        }
     }
 }
 
-.menu__logo {
-    width: 11px;
-    height: 11px;
-    border-color: white;
-    fill: #000000;
+
+.icon-logo {
+    position: absolute;
+    height: 40px;
+    right: 0;
+    top: 5px;
+
 }
 
-.menu-container {
-    background: transparent;
-}
+
 
 .mob__list {
     color: #212121;
     font-size: 40px;
     line-height: 1.17;
-    margin-bottom: 302px;
+    // margin-bottom: 300px;
 
     .link {
 
@@ -78,6 +97,8 @@
 
 
 .mob__contacts {
+    bottom: 35px;
+    position: absolute;
     margin-bottom: 64px;
 }
 
@@ -96,6 +117,11 @@
     color: #757575;
     font-size: 24px;
     line-height: 1.17;
+}
+
+.mob_socials {
+    position: absolute;
+    bottom: 48px;
 }
 
 .mob_socials-list {
