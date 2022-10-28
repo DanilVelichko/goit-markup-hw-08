@@ -11,7 +11,7 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     &__container {
-        width: 450px;
+        width: 100%;
         min-height: 609px;
         padding: 40px;
         background-color: #fff;
@@ -25,9 +25,13 @@
         transform: translate(-50%, -50%);
         display: block;
 
-        @include mobile {}
+        @include mobile {
+            width: 450px;
+        }
 
-        @include tablet {}
+        @include tablet {
+            width: 450px;
+        }
 
         @include desktop {
             width: 528px;
@@ -122,14 +126,18 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    width: 370px;
+    width: 100%;
     text-align: left;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-    @include mobile {}
+    @include mobile {
+        width: 370px;
+    }
 
-    @include tablet {}
+    @include tablet {
+        width: 370px;
+    }
 
     @include desktop {
         width: 448px;
